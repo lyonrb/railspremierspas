@@ -37,7 +37,7 @@ cd railsgirls
 rails s
 {% endhighlight %}
 
-Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 CTRL-C pour quitter le serveur dans le Terminal/Ligne de commande.
 
@@ -52,7 +52,7 @@ rake db:migrate
 rails s
 {% endhighlight %}
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur.
 
 CTRL-C pour quitter le serveur une fois que vous avez cliqué un peu partout.
 
