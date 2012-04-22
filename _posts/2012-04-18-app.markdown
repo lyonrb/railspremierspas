@@ -37,7 +37,7 @@ cd railsgirls
 rails s
 {% endhighlight %}
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur.
 
 CTRL-C pour quitter le serveur dans le Terminal/Ligne de commande.
 
@@ -64,7 +64,7 @@ Le design n'est pas très beau. Essayons de faire quelque chose pour changer ça
 Ouvrez app/views/layouts/application.html.erb et ajouter au-dessus de
 
 {% highlight erb %}
-<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "application", :media => "all" %>
 {% endhighlight %}
 
 la ligne
