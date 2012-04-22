@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Installation de Rails
+title: Installez de Rails
 permalink: install.html
 ---
 
-# Installation de Rails
+# Installez de Rails
 
 Pour construire des applications et autres avec Ruby on Rails, vous avez besoin d'installer quelques applications et l'environnement de développement sur votre ordinateur.
 
