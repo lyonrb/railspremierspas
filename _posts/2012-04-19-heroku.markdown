@@ -1,30 +1,28 @@
 ---
 layout: default
-title: Rails Girls on Heroku
+title: Déployez l'application
 permalink: heroku.html
 ---
 
-# Put Your App Online With Heroku
+# Déployez l'application
 
-*Created by Terence Lee, [@hone02](https://twitter.com/hone02)*
+*Créé par Terence Lee, [@hone02](https://twitter.com/hone02)*
 
-### Get Heroku
+### Installez Heroku
 
-Follow steps 1 through 3 of the [quickstart guide](https://devcenter.heroku.com/articles/quickstart) to sign up, install the toolbelt, and login.
+Suivez les étapes 1, 2 et 3 du [quickstart guide](https://devcenter.heroku.com/articles/quickstart) pour vous enregistrer, installer la toolbelt et vous connecter.
 
-__COACH__: Talk about the benefits of deploying to Heroku vs traditional servers.
+### Préparez l'application
 
-### Preparing your app
+#### Mettez à jour la base de données
 
-#### Updating our database
-
-First, we need to get our database to work on Heroku, which uses a different database. Please change the following in the Gemfile:
+Tout d'abord, vous devez faire fonctionner la base de données, qui utilise un base différente. Veuillez remplacer les points suivants dans le Gemfile :
 
 {% highlight ruby %}
 gem 'sqlite3'
 {% endhighlight %}
 
-to
+par
 
 {% highlight ruby %}
 group :development do
@@ -35,13 +33,11 @@ group :production do
 end
 {% endhighlight %}
 
-Run `bundle install --without production` to setup your dependencies.
+Lancez `bundle install --without production` pour configurer les dépendances.
 
-__COACH__: You can talk about RDBMS and the different ones out there.
+#### Système de contrôle de versions
 
-#### Version Control Systems
-
-We need to add our code to version control. You can do this by running the following in the terminal:
+Vous devez versionner votre code grâce à un système de contrôle de versions. Vous pouvez le faire en exécutant les commandes dans le terminal :
 
 {% highlight sh %}
 git init
@@ -49,14 +45,12 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: This would be a good time to talk about version control systems and git.
 
+### Déployez votre application
 
-### Deploying your app
+#### Création de l'app
 
-#### App creation
-
-We need to create our heroku app by typing `heroku create --stack cedar` in the terminal and see something like this:
+Vous devez créer l'app Heroku en tapant `heroku create --stack cedar` dans le terminal et vous devriez voir le texte suivant s'afficher :
 
 {% highlight sh %}
 Creating evening-sky-7498... done, stack is cedar
@@ -64,11 +58,11 @@ http://evening-sky-7498.herokuapp.com/ | git@heroku.com:evening-sky-7498.git
 Git remote heroku added
 {% endhighlight %}
 
-In this case "evening-sky-7498" is your app name.
+Dans ce cas  "evening-sky-7498" est le nom de votre app.
 
-#### Pushing the code
+#### Pusher le code
 
-Next we need to push our code to heroku by typing `git push heroku master`. You'll see push output like the following:
+Ensuite, vous devez pusher le code sur Heroku en tapant `git push heroku master`. Vous devriez voir le texte suivant s'afficher :
 
 {% highlight sh %}
 Counting objects: 134, done.
@@ -87,11 +81,11 @@ Total 134 (delta 26), reused 0 (delta 0)
        http://evening-sky-7498.herokuapp.com deployed to Heroku
 {% endhighlight %}
 
-You'll know the app is done being pushed, when you see the "Launching..." text like above.
+Vous saurez que l'application a été pushé lorsque vous verez le texte "Launching..." comme ci-dessus.
 
-#### Migrate database
+#### Migration de la base de données
 
-Next we need to migrate our database like we did locally during the workshop: `heroku run rake db:migrate`
+Enfin, vous devez migrer la base de données comme vous l'avez fait localement précédement : `heroku run rake db:migrate`
 
-When that command is finished being run, you can hit the app based on the url. For this example app, you can go to [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com). You can also type `heroku open` in the terminal to visit the page.
+Quand cette commande a fini de s'exécuter, vous pouvez voir votre application en ligne. Dans cet exemple, vous pouvez aller sur [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com). Vous pouvez aussi taper `heroku open` dans le terminal pour ouvrir directement la page.
 
