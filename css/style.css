@@ -63,13 +63,20 @@ hr {
 header {
   height:70px;
   color:#fff;
-  padding-top:50px;
+  padding-top:30px;
+  padding-bottom:20px;
   background:#d3360b;
 }
 
 header #logo {
-  width:240px;
+  width:350px;
   float:left;
+  font-size: 40px;
+  color: white;
+}
+
+#logo .title-rails {
+  font-weight: bold;
 }
 
 nav {
