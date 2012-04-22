@@ -8,7 +8,7 @@ permalink: app.html
 
 *Créé par Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
       
-[**Installez Rails**](/install)
+[**Installez Rails**](./install)
 
 
 ## 0: Prenez connaissance des outils
@@ -241,5 +241,5 @@ root :to => redirect("/ideas")
 
 ## Guides additionnels
 
-* GUIDE 1: [Déployez votre application sur Heroku par Terence Lee](/heroku)
+* GUIDE 1: [Déployez votre application sur Heroku par Terence Lee](./heroku)
 * GUIDE 2: [Ajoutez des commentaires par Janika Liiv](http://janikaliiv.eu/homework/) (en)
