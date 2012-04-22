@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Installez de Rails
+title: Installez Ruby on Rails
 permalink: install.html
 ---
 
-# Installez de Rails
+# Installez Ruby on Rails
 
-Pour construire des applications et autres avec Ruby on Rails, vous avez besoin d'installer quelques applications et l'environnement de développement sur votre ordinateur.
+Avant de construire vos applications avec Ruby on Rails, vous devez installer quelques bibliothèques sur votre machine.
 
-Suivez les instructions pour votre systèmes d'exploitation.
+Suivez les instructions en fonction de votre environnement.
 
 * [Installation sur OS X](#setup_for_os_x)
 * [Installation sur  Windows](#setup_for_windows)
@@ -18,7 +18,7 @@ Suivez les instructions pour votre systèmes d'exploitation.
 
 ## Installation sur OS X
 
-Tout d'abord vous avez besoin d'installer des outils génériques utiles pour l'installation des applications de développement.
+Tout d'abord vous avez besoin d'installer quelques bibliothèques avant de pouvoir installer Ruby.
 
 **Etape 1.** Vérifiez la version de votre système d'exploitation
 
@@ -40,7 +40,7 @@ Picture 2
  
 * [Installeur for 10.6](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg) <span class="muted">(273Mb)</span>
 
-**Step 4.** Après avoir lancé l'installeur, ouvrez Terminal.app. Ouvrez Spotlight (l'icône loupe dans le coin en haut à droite de l'écran), tapez *Terminal.app* et cliqué sur l'option qui s'affiche (Image 3).
+**Step 4.** Après avoir lancé l'installeur, ouvrez Terminal.app. Ouvrez Spotlight (l'icône loupe dans le coin en haut à droite de l'écran), tapez *Terminal.app* et cliquez sur l'option affichée (Image 3).
 
 ![Spotlight](images/3.png "Spotlight")
 
