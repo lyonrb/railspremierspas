@@ -16,7 +16,7 @@ Suivez les étapes 1, 2 et 3 du [quickstart guide](https://devcenter.heroku.com/
 
 #### Mettez à jour la base de données
 
-Tout d'abord, vous devez faire fonctionner la base de données, qui utilise un base différente. Veuillez remplacer les points suivants dans le Gemfile :
+Tout d'abord, vous devez faire fonctionner la base de données, qui utilise une base différente. Veuillez remplacer les points suivants dans le Gemfile :
 
 {% highlight ruby %}
 gem 'sqlite3'
