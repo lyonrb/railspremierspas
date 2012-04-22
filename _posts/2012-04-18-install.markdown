@@ -26,27 +26,27 @@ Cliquez sur le menu Apple et choisissez "A propos de ce mac" (Image 1)
 
 ![Menu Apple](./images/1.png "Menu Apple")
 
-Image 2
+Image 1
         
 **Etape 2.** Dans le fenêtre vous trouverez la version de votre système d'exploitation (Image 2). Si votre numéro de version démarre par 10.6 ou 10.7, ce guide est pour vous. Sinon, commencez par mettre à jour votre système d'exploitation
 
 ![A propos de la boîte de dialogue Mac](./images/2.png "A propos de la boîte de dialogue Mac")
 
-Picture 2
+Image 2
  
-**Step 3.** Téléchargez et installez ces outils de développement pour Mac OS X en fonction de numéro de version de votre système.
+**Etape 3.** Téléchargez et installez ces outils de développement pour Mac OS X en fonction de numéro de version de votre système.
  
 * [Installeur for 10.7](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg) <span class="muted">(273Mb)</span>
  
 * [Installeur for 10.6](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg) <span class="muted">(273Mb)</span>
 
-**Step 4.** Après avoir lancé l'installeur, ouvrez Terminal.app. Ouvrez Spotlight (l'icône loupe dans le coin en haut à droite de l'écran), tapez *Terminal.app* et cliquez sur l'option affichée (Image 3).
+**Etape 4.** Après avoir lancé l'installeur, ouvrez Terminal.app. Ouvrez Spotlight (l'icône loupe dans le coin en haut à droite de l'écran), tapez *Terminal.app* et cliquez sur l'option affichée (Image 3).
 
 ![Spotlight](images/3.png "Spotlight")
 
 Image 3
  
-**Image 5.** A présent, copiez-collez cette line dans le Terminal et appuyez sur Entrée. Admirez le texte qui défile sur votre écran. Cela peut prendre un certain temps (environs 30 minutes). L'installeur peut vous demander votre mot de passe administrateur. Prendre une boisson raffraichissante avant de commencer est recommandé !
+**Etape 5.** A présent, copiez-collez cette line dans le Terminal et appuyez sur Entrée. Admirez le texte qui défile sur votre écran. Cela peut prendre un certain temps (environs 30 minutes). L'installeur peut vous demander votre mot de passe administrateur. Prendre une boisson raffraichissante avant de commencer est recommandé !
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx.sh)
