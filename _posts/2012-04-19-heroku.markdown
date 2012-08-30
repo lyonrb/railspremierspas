@@ -45,7 +45,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: This would be a good time to talk about version control systems and git.
+__COACH__: expliquez un peu git et les systèmes de gestion de version.
 
 ### Déployez votre application
 
@@ -53,7 +53,8 @@ __COACH__: This would be a good time to talk about version control systems and g
 
 #### App creation
 
-We need to create our heroku app by typing `heroku create` in the terminal and see something like this:
+Vous devez créer l'app Heroku en tapant `heroku create` dans le terminal et vous devriez voir le texte suivant s'afficher :
+
 
 {% highlight sh %}
 Creating evening-sky-7498... done, stack is cedar
