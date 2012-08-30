@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Déployez l'application
-permalink: heroku.html
+permalink: heroku
 ---
 
 # Déployez l'application
@@ -45,12 +45,15 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
+__COACH__: This would be a good time to talk about version control systems and git.
 
 ### Déployez votre application
 
 #### Création de l'app
 
-Vous devez créer l'app Heroku en tapant `heroku create --stack cedar` dans le terminal et vous devriez voir le texte suivant s'afficher :
+#### App creation
+
+We need to create our heroku app by typing `heroku create` in the terminal and see something like this:
 
 {% highlight sh %}
 Creating evening-sky-7498... done, stack is cedar

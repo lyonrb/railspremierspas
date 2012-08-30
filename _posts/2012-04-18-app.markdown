@@ -1,24 +1,24 @@
 ---
 layout: default
 title: Développez votre application
-permalink: app.html
+permalink: app
 ---
 
 # Développez votre application
 
 *Créé par Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
       
-[**Installez Rails**](./install)
+[**First, make sure you installed Rails, otherwise please follow this link.**](/install)
 
 
-## 0: Prenez connaissance des outils
+## Étape 0: Get to know the tools
 
-* L'éditeur de texte (Komodo Edit) pour écrire du code et éditer les fichiers
-* Terminal / Ligne de commande pour démarrer le serveur Rails et lancer des commandes
-* Le navigateur web pour visualiser vos applications
+* Texteditor: (Gedit, Vim, Emacs, Komodo Edit, Sublime Text) are examples of texteditors your can use for writing code and editing files.
+* Terminal / Command Prompt is where you start the rails server and run commands.
+* Web browser (Firefox, Safari, Chrome) are for viewing your application.
 
 
-## 1: Créer l'application
+## Étape 1: Créer l'application
 
 Vous allez créer une application appelée railsgirls.
 
@@ -41,10 +41,13 @@ Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
 CTRL-C pour quitter le serveur dans le Terminal/Ligne de commande.
 
+**Coach:** Quick explanation about what each command does. What was generated? What does the server do. Talk about MVC.
 
 ## 2: Créer le scaffold Idea
 
 Vous allez utiliser les scaffolds de Rails pour générer un point de départ qui vous permettra de lister, ajouter, supprimer, éditer et voir des choses ; dans notre cas, des idées (Idea).
+
+**Coach:** What is a scaffold (1. the command, 2. the model name and related db table; pluralization/naming conventions, 3. attributes and types)? What are migrations and when do you need to do them, why?
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
@@ -54,17 +57,18 @@ rails s
 
 Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur.
 
-CTRL-C pour quitter le serveur une fois que vous avez cliqué un peu partout.
+CTRL-C exits the server when you have clicked around for a little.
 
+## Étape 3: Design
 
-## 3: Design
+**Coach:** Talk about the relationship of HTML and Rails; what part of views is HTML and what is Embedded Ruby (ERB)? How does this relate to MVC (models and controllers control the logic of dynamically generating HTML, or views)?
 
 Le design n'est pas très beau. Essayons de faire quelque chose pour changer ça. Nous utiliserons le projet Twitter Bootstrap pour mettre un style par défaut plus joli facilement.
 
 Ouvrez app/views/layouts/application.html.erb et ajouter au-dessus de
 
 {% highlight erb %}
-<%= stylesheet_link_tag "application", :media => "all" %>
+<%= stylesheet_link_tag "application" %>
 {% endhighlight %}
 
 la ligne
@@ -87,8 +91,7 @@ par
 </div>
 {% endhighlight %}
 
-Ajoutez la barre de menu et le footer à la page et stylez-les.
-
+Let&#8217;s also add topbar and footer to the layout and style those and the ideas table.
 
 Dans application.html.erb sous `<body>` ajoutez :
 
@@ -132,11 +135,11 @@ td.picture { width: 140px; }
 td.picture img { width: 140px; }
 {% endhighlight %}
 
+**Coach:** Talk a little about CSS and layouts.
 
 ## 4: Ajout de l'upload d'images
 
 Vous avez besoin d'installer une bibliothèque pour l'upload d'image.
-
 
 Ouvrez Gemfile dans le projet et ajoutez
 
@@ -149,6 +152,8 @@ sous
 {% highlight ruby %}
 gem 'sqlite3'
 {% endhighlight %}
+
+**Coach:** Tell what libraries are and why they are used. Maybe few words about Open Source?
 
 Maintenant, générez le code pour nécessaire à l'upload les images. Dans le Terminal/Ligne de commande, lancez :
 
@@ -207,6 +212,7 @@ par
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
 
+**Coach:** Talk a little about HTML.
 
 ## 5: Modifiez les routes
 
@@ -230,7 +236,6 @@ Enfin, ouvrez config/routes.rb et ajoutez à la seconde ligne du fichier :
 root :to => redirect("/ideas")
 {% endhighlight %}
 
-
 ## Allez plus loin
 
 * Ajoutez un design en utilisant HTML et CSS
@@ -241,5 +246,6 @@ root :to => redirect("/ideas")
 
 ## Guides additionnels
 
-* GUIDE 1: [Déployez votre application sur Heroku par Terence Lee](./heroku)
-* GUIDE 2: [Ajoutez des commentaires par Janika Liiv](http://janikaliiv.eu/homework/) (en)
+* GUIDE 1: [Ajoutez des commentaires par Janika Liiv](http://janikaliiv.eu/homework/) (en)
+* GUIDE 2: [Déployez votre application sur Heroku par Terence Lee](./heroku)
+* GUIDE 3: [Build a map of workshop participants by Rails Girls Berlin](http://blog.railsgirlsberlin.de/apptutorial/)
