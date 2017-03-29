@@ -18,17 +18,13 @@ Suivez les instructions en fonction de votre environnement.
 
 ## Installation sur OS X
 
-Tout d'abord vous avez besoin d'installer quelques bibliothèques avant de pouvoir installer Ruby.
-
 **Étape 1.** Vérifiez la version de votre système d'exploitation
 
-Cliquez sur le menu Apple et choisissez "A propos de ce Mac" (Image 1)
+Cliquez sur le menu Apple et choisissez "A propos de ce Mac"
 
 ![Menu Apple](/images/1.png "Menu Apple")
-
-Image 1
         
-**Étape 2.** Dans le fenêtre vous trouverez la version de votre système d'exploitation (Image 2). Si votre numéro de version démarre par 10.6 ou 10.7, ce guide est pour vous. Sinon, commencez par mettre à jour votre système d'exploitation
+**Étape 2.** Dans le fenêtre vous trouverez la version de votre système d'exploitation (Image 2). Si votre numéro de version démarre par 10.6, 10.7, 10.8, 10.9, 10.10 ou 10.11&nbsp;: ce guide est pour vous. Sinon, commencez par mettre à jour votre système d'exploitation
 
 ![A propos de la boîte de dialogue Mac](/images/2.png "A propos de la boîte de dialogue Mac")
 
