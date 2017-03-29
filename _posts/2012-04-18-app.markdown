@@ -10,14 +10,33 @@ permalink: app
 
 [**Premièrement, installez Ruby on Rails en suivant ce guide.**](/install)
 
+## Étudier les outils
 
-## Étape 0: Étudier les outils
 
-* Éditeurs de code / Éditeur de texte : gedit, vim, emacs, Komodo, Sublime Text, Textmate sont des examples d'éditeurs que vous pouvez utiliser pour écrire du code et éditer des fichiers.
-* Terminal / Ligne de commande : exécuter des commandes pour par example démarrer le server Rails.
-* Navigateur web (Firefox, Safari, Chrome) : pour afficher votre application.
+<div class="indent" markdown="1">
 
-## Étape 1: Créer l'application
+<h3><i class="icon-text-editor">&nbsp;</i></h3>
+### Éditeurs de code / Éditeur de texte
+* [Atom](https://atom.io/), gedit, vim, emacs, Sublime Text, Textmate sont des examples d'éditeurs que vous pouvez utiliser pour écrire du code et éditer des fichiers.
+
+<h3><i class="icon-prompt">&nbsp;</i></h3>
+
+### Terminal / Invite de commandes
+* exécuter des commandes pour par example démarrer le server Rails.
+
+<h3><i class="icon-browser">&nbsp;</i></h3>
+
+### Navigateur web
+* (Firefox, Safari, Chrome) pour afficher votre application.
+
+</div>
+
+<div class="to-translate" markdown="1">
+### Systèmes d'exploitation
+It is important that you select the instructions specific to your operating system - the commands you need to run on a Windows computer are slightly different to Mac or Linux. If you're having trouble check the Operating System switcher at the bottom of the commands. In case you're using a cloud service (e.g. Cloud9, Codenvy), you need to run the Linux commands even if you are on a Windows computer.
+</div>
+
+## *1)* Créer l'application
 
 Vous allez créer une application appelée railsgirls.
 
@@ -25,24 +44,120 @@ Ouvrez le Terminal / Ligne de commande :
 
 * OS X: Ouvrez Spotlight, tapez *Terminal* et cliquez sur l'option *Terminal* qui vient d'apparaitre.
 * Windows: Cliquez sur le menu Démarrer et cherchez "Command Prompt" et cliquez sur *Command Prompt with Ruby on Rails*.
+* Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
+* Cloud service (par ex. Cloud9, Codenvy)&nbsp;: Ouvrez votre <em>workspace</em>. Le terminal est le cadre en bas de la fenêtre de votre navigateur. 
 
-Tapez les commandes:
+<div class="to-translate" markdown="1">
+Next, type these commands in the terminal:
 
+<div class="os-specific">
+  <div class="nix">
 {% highlight sh %}
 mkdir projects
-cd projects
-rails new railsgirls
-cd railsgirls
-rails s
 {% endhighlight %}
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+    <div>
+<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+    </div>
 
-CTRL-C pour quitter le serveur dans le Terminal/Ligne de commande.
+{% highlight sh %}
+cd projects
+{% endhighlight %}
+
+    <div>
+<p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+    </div>
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
+    <div>
+<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+    </div>
+
+{% highlight sh %}
+cd railsgirls
+{% endhighlight %}
+
+    <div>
+<p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+    </div>
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+mkdir projects
+{% endhighlight %}
+
+    <div>
+<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+    </div>
+
+{% highlight sh %}
+cd projects
+{% endhighlight %}
+
+    <div>
+<p>You can verify you are now in an empty directory or folder by again running the <code>dir</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+    </div>
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
+    <div>
+<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+    </div>
+
+{% highlight sh %}
+cd railsgirls
+{% endhighlight %}
+
+    <div>
+<p>If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+    </div>
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+  </div>
+</div>
+
+Open <http://localhost:3000> in your browser. If you are using a cloud service (e.g. Codenvy), use its preview functionality instead (see [installation guide](/install#using-a-cloud-service) for details).
+
+You should see a page with the Rails logo and the heading "Yay! You’re on Rails!", which means that your Rails app is up and running.
+
+Notice in this window the command prompt is not visible because you are now in the Rails server, the command prompt looks like this:
+
+<div class="os-specific">
+  <div class="nix">
+{% highlight sh %}
+$
+{% endhighlight %}
+  </div>
+  <div class="win">
+{% highlight sh %}
+>
+{% endhighlight %}
+  </div>
+</div>
+
+When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
+
+Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
+
+**Coach:** Explain what each command does. What was generated? What does the server do?
+
+</div>
 
 **Coach:** Expliquez chaque commande. Qu'est ce qui a été généré ? Comment marche le serveur ? Un mot à propos de MVC.
 
-## Étape 2: Créer le scaffold Idea
+## *2)* Créer le scaffold Idea
 
 Vous allez utiliser les scaffolds de Rails pour générer un point de départ qui vous permettra de lister, ajouter, supprimer, éditer et voir des choses ; dans notre cas, des idées (Idea).
 
@@ -50,15 +165,24 @@ Vous allez utiliser les scaffolds de Rails pour générer un point de départ qu
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
+{% endhighlight %}
+
+<div class="to-translate">
+The scaffold creates new files in your project directory, but to get it to work properly we need to run a couple of other commands to update our database and restart the server.
+</div>
+
+{% highlight sh %}
 rake db:migrate
 rails s
 {% endhighlight %}
 
-Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur.
+Ouvrez [http://localhost:3000/ideas](http://localhost:3000/ideas) dans votre navigateur. <span class="to-translate">Cloud service (e.g. Codenvy) users need to append '/ideas' to their preview url instead (see [installation guide](/install#using-a-cloud-service)).</span>
 
-Ctrl+C arrête le serveur quand vous avez fini de jouer avec.
+Testez l'application et mesurez le chemin parcouru après l'écriture de seulement quelques lignes&nbsp;! 
 
-## Étape 3: Design
+<tt>Ctrl+C</tt> arrête le serveur quand vous avez fini de jouer avec.
+
+## *3)* Design
 
 **Coach:** Parlez de la relation entre HTML et Rails, quelles parties des vues sont HTML et lesquelles sont du Ruby (ERB)? Quel est le rapport avec MVC ?
 
@@ -138,7 +262,7 @@ td.picture img { width: 140px; }
 
 **Coach:** Parlez un peu des layouts et de CSS.
 
-## Étape 4: Ajout de l'upload d'images
+## *4)* Ajout de l'upload d'images
 
 Vous avez besoin d'installer une bibliothèque pour charger les images.
 
@@ -154,7 +278,6 @@ sous
 gem 'sqlite3'
 {% endhighlight %}
 
-**Coach:** Tell what libraries are and why they are used. Maybe few words about Open Source?
 **Coach:** Quelles sont les bibliothèques utilisées et pourquoi sont elles utilisées ? Parler de l'Open Source.
 
 Maintenant, générez le code nécessaire à l'upload des images. Dans le Terminal/Ligne de commande, lancez :
@@ -241,7 +364,7 @@ root :to => redirect("/ideas")
 ## Allez plus loin
 
 * Ajoutez un design en utilisant HTML et CSS
-* Ajoutez la possibiliter de voter
+* Ajoutez la possibiliter de voter sur chaque idée
 * Utilisez CoffeeScript (ou JavaScript) pour ajouter des interactions
 * Ajouter un redimensionnement d'image pour qu'elles chargent plus vite
 
