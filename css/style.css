@@ -307,3 +307,9 @@ kbd {
     line-height: 1.5em;
     white-space: nowrap;
 }
+
+.to-translate {
+    background-color: #ffe;
+    border: 1px solid pink;
+  
+}
