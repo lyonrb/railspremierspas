@@ -11,57 +11,13 @@ Avant de construire vos applications avec Ruby on Rails, vous devez installer qu
 Suivez les instructions en fonction de votre environnement.
 
 * [Installation sur OS X](#installation_sur_os_x)
-* [Installation sur OS X (Ancienne méthode)](#installation_sur_os_x_old)
 * [Installation sur Windows](#installation_sur_windows)
 * [Installation sur Ubuntu](#installation_sur_ubuntu)
 
 <hr />
 
 ## Installation sur OS X
-**Étape 1.** Ouvrez Terminal.app. Ouvrez Spotlight (l'icône loupe dans le coin en haut à droite de l'écran), tapez *Terminal.app* et cliquez sur l'option affichée.
 
-![Spotlight](/images/3.png "Spotlight")
-
-**Étape 2.** Puis copiez cette ligne de texte dans le Terminal et valider avec Entrée.
-
-{% highlight console %}
-bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx.sh)
-{% endhighlight %}
-
-Ci-dessous un exemple de ce que vous devriez voir après quelques secondes.
-
-{% highlight console %}
-Downloading Tokaido.app
-######################################################################## 100.0%
-Setting up Tokaido.app
-
-- - - - - - - - -
-
-Now we are going to print some information to check that everything is done:
-
- ,;;;, ,;;;,
-;;;' ';' ';;; Should be ruby 1.9.3p194: ruby 1.9.3p194
-;;;       ;;;
- ';;,   ,;;'  Should be Rails 3.2.3: Rails 3.2.3
-   ';;,;;'
-     ';'
-
-- - - - - - - - -
-
-Done!
-Please restart your terminal.
-{% endhighlight %}
-
-Si tout s'est bien passé, vous avez juste à ouvrir un nouveau Terminal et vous devriez avoir un environnement de développement en état de marche. Bien joué !
-
-Vous aurez aussi besoin d'un éditeur de code pour programmer, pour cela nous recommandons Komodo Edit.
-
-* [Télécharger Komodo Edit et l'installer](http://www.activestate.com/komodo-edit/downloads)
-
-<hr />
-
-## Installation sur OS X Old
- 
 Tout d'abord vous avez besoin d'installer quelques bibliothèques avant de pouvoir installer Ruby.
 
 **Étape 1.** Vérifiez la version de votre système d'exploitation
